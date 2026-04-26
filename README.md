@@ -1,9 +1,9 @@
-# GESTISCIME — Prelaunch landing page
+# GESTISCIME
 
-> Il pilota automatico per il tuo patrimonio.
-> Landing page di pre-lancio con raccolta email sicura su Supabase.
+> Innovativa soluzione di wealth management in fase di pre-lancio.
+> Pagina ufficiale per l'iscrizione alla lista d'attesa (Beta Privata).
 
-**Live:** [https://gestisci.me](https://gestisci.me) (dopo il setup DNS qui sotto)
+**Live:** [https://gestisci.me](https://gestisci.me)
 
 ---
 
@@ -24,6 +24,10 @@
 6. [SEO checklist](#seo-checklist)
 7. [Troubleshooting](#troubleshooting)
 8. [Stack tecnologico](#stack-tecnologico)
+
+## La Startup
+
+GESTISCIME è una nuova piattaforma tecnologica progettata per semplificare e ottimizzare la gestione finanziaria. Attualmente siamo in modalità stealth (pre-lancio) e stiamo accettando le iscrizioni per la nostra closed-beta, prevista per il Q4 2026. L'obiettivo è fornire uno strumento unificato, estremamente sicuro ed elegantemente disegnato per i nostri primi utenti esclusivi.
 
 ---
 
