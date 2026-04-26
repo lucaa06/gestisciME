@@ -1,0 +1,65 @@
+# =============================================================
+# GESTISCIME — Deploy automatico su GitHub Pages
+# =============================================================
+# Ad ogni push su main:
+#   1. Genera assets/js/config.js iniettando i Secrets
+#   2. Carica tutto come artifact GitHub Pages
+#   3. Pubblica su https://gestisci.me
+#
+# Secrets necessari (Settings → Secrets and variables → Actions):
+#   - SUPABASE_URL       → es. https://abcdef.supabase.co
+#   - SUPABASE_ANON_KEY  → la chiave "anon" / "public"
+# =============================================================
+
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Inject Supabase config from Secrets
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+        run: |
+          cat > assets/js/config.js << EOF
+          window.GESTISCIME_CONFIG = {
+            SUPABASE_URL: "${SUPABASE_URL}",
+            SUPABASE_ANON_KEY: "${SUPABASE_ANON_KEY}",
+            WAITLIST_TABLE: "waitlist",
+            SOURCE: "homepage",
+          };
+          EOF
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

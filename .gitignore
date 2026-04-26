@@ -1,0 +1,24 @@
+# -------------------------------------------------------
+# GESTISCIME — .gitignore
+# -------------------------------------------------------
+
+# Supabase config con chiavi REALI — non committare MAI.
+# Al deploy, GitHub Actions lo genera al volo dai Secrets.
+assets/js/config.js
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+._*
+
+# Editor / IDE
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+*.code-workspace
+
+# Node (se dovessi mai usare un tool locale)
+node_modules/

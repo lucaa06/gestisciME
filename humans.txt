@@ -1,0 +1,15 @@
+/* TEAM */
+  Made with care in Italia.
+  Contact: info [at] gestisci.me
+
+/* SITE */
+  Last update: 2026/04/25
+  Language: Italian
+  Doctype: HTML5
+  Standards: HTML5, CSS3, ES2020, JSON-LD, OpenGraph
+  Components: Vanilla JS, Supabase
+  Software: VS Code
+
+/* THANKS */
+  Cormorant Garamond by Christian Thalmann
+  DM Sans by Colophon Foundry & Indian Type Foundry

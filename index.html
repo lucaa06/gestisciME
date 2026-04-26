@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Primary Meta Tags -->
+  <title>GESTISCIME — Il pilota automatico per il tuo patrimonio | Iscriviti alla beta</title>
+  <meta name="title" content="GESTISCIME — Il pilota automatico per il tuo patrimonio | Iscriviti alla beta">
+  <meta name="description" content="GESTISCIME unifica conti, bollette, investimenti, fatture e patrimonio in un'unica app intelligente. Open Banking PSD2, AI predittiva, automazione totale. Iscriviti alla lista d'attesa per l'Italia.">
+  <meta name="keywords" content="gestione patrimonio, app bancaria, automazione bollette, open banking italia, finanza personale, gestione spese aziendali, PSD2, fintech italia, controllo conti, investimenti automatici, freelance partita iva, gestione finanziaria PMI, dashboard finanziaria, AI finanza personale">
+  <meta name="author" content="GESTISCIME">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow">
+  <meta name="bingbot" content="index, follow">
+  <meta name="rating" content="general">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <!-- Geo / Locale -->
+  <meta name="geo.region" content="IT">
+  <meta name="geo.placename" content="Italia">
+  <meta name="ICBM" content="41.9028, 12.4964">
+  <meta name="language" content="Italian">
+  <meta http-equiv="content-language" content="it-IT">
+
+  <!-- Canonical & Hreflang -->
+  <link rel="canonical" href="https://gestisci.me/">
+  <link rel="alternate" hreflang="it" href="https://gestisci.me/">
+  <link rel="alternate" hreflang="it-IT" href="https://gestisci.me/">
+  <link rel="alternate" hreflang="x-default" href="https://gestisci.me/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="GESTISCIME">
+  <meta property="og:url" content="https://gestisci.me/">
+  <meta property="og:title" content="GESTISCIME — Il pilota automatico per il tuo patrimonio">
+  <meta property="og:description" content="Conti, bollette, investimenti e fatture in un'unica app. Open Banking PSD2 + AI. Iscriviti alla beta in Italia.">
+  <meta property="og:image" content="https://gestisci.me/assets/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="GESTISCIME — dashboard di gestione patrimoniale unificata">
+  <meta property="og:locale" content="it_IT">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://gestisci.me/">
+  <meta name="twitter:title" content="GESTISCIME — Il pilota automatico per il tuo patrimonio">
+  <meta name="twitter:description" content="Conti, bollette, investimenti e fatture in un'unica app. Open Banking PSD2 + AI. Iscriviti alla beta.">
+  <meta name="twitter:image" content="https://gestisci.me/assets/images/og-image.png">
+  <meta name="twitter:image:alt" content="GESTISCIME — dashboard di gestione patrimoniale unificata">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+  <link rel="alternate icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#150826">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="GESTISCIME">
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+  <!-- Fonts: Cormorant Garamond (display) + DM Sans (body) -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Schema.org JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://gestisci.me/#organization",
+    "name": "GESTISCIME",
+    "alternateName": "Gestiscime",
+    "url": "https://gestisci.me/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://gestisci.me/assets/images/logo.png",
+      "width": 512,
+      "height": 512
+    },
+    "description": "Piattaforma fintech italiana per la gestione unificata e automatizzata del patrimonio personale e aziendale.",
+    "foundingDate": "2026",
+    "areaServed": {
+      "@type": "Country",
+      "name": "Italia"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "IT"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/company/gestiscime",
+      "https://twitter.com/gestiscime",
+      "https://www.instagram.com/gestiscime"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "info@gestisci.me",
+      "availableLanguage": ["Italian", "English"]
+    }
+  }
+  </script>
+
+  <!-- Schema.org JSON-LD: WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://gestisci.me/#website",
+    "url": "https://gestisci.me/",
+    "name": "GESTISCIME",
+    "description": "Il pilota automatico per il tuo patrimonio",
+    "publisher": {
+      "@id": "https://gestisci.me/#organization"
+    },
+    "inLanguage": "it-IT"
+  }
+  </script>
+
+  <!-- Schema.org JSON-LD: SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "GESTISCIME",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "iOS, Android, Web",
+    "description": "App per la gestione unificata di conti bancari, bollette, investimenti, fatture e patrimonio. Open Banking PSD2, automazione AI, conformità GDPR.",
+    "inLanguage": "it-IT",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/PreOrder"
+    },
+    "featureList": [
+      "Aggregazione conti bancari (Open Banking PSD2)",
+      "Riconoscimento automatico bollette",
+      "Pagamento automatico scadenze",
+      "Categorizzazione spese AI",
+      "Gestione investimenti multi-asset",
+      "Accantonamento virtuale tasse per partite IVA",
+      "Hub commercialista",
+      "Eredità digitale e successione patrimoniale"
+    ]
+  }
+  </script>
+
+  <!-- Schema.org JSON-LD: FAQPage (boost AI Overviews / GEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "GESTISCIME è una banca?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. GESTISCIME non è una banca: è un intermediario tecnologico autorizzato che si collega in lettura ai tuoi conti bancari tramite le API Open Banking previste dalla normativa europea PSD2. I tuoi soldi restano sempre nella tua banca."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "I miei dati bancari sono al sicuro?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sì. GESTISCIME è progettato secondo gli standard PSD2 e GDPR: crittografia AES-256, autenticazione forte (SCA), server in Unione Europea, consenso revocabile in qualsiasi momento. Non conserviamo le tue credenziali bancarie."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quando sarà disponibile in Italia?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Il lancio dell'MVP è previsto nel 2026. Iscrivendoti alla lista d'attesa avrai accesso anticipato alla beta privata e potrai contribuire allo sviluppo del prodotto."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quanto costa GESTISCIME?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Il livello base con aggregazione conti e budgeting sarà gratuito. Le funzionalità avanzate (automazione pagamenti, hub commercialista, AI advisor) saranno disponibili tramite abbonamento mensile. I prezzi finali verranno comunicati prima del lancio."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Funziona anche per partite IVA e PMI?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sì. GESTISCIME è pensato sia per privati sia per professionisti e PMI. Per le partite IVA include accantonamento virtuale di IVA e contributi, gestione fatture elettroniche tramite SDI, scadenzario fiscale e hub di scambio documenti con il commercialista."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Schema.org JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://gestisci.me/"
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <a href="#main" class="skip-link">Vai al contenuto principale</a>
+
+  <!-- Decorative grain overlay -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Top navigation -->
+  <header class="site-header" role="banner">
+    <div class="container nav-row">
+      <a href="/" class="brand" aria-label="GESTISCIME — torna alla home">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+          <path d="M16 2 L28 9 L28 23 L16 30 L4 23 L4 9 Z" fill="none" stroke="currentColor" stroke-width="1.4"/>
+          <path d="M16 9 L22 12.5 L22 19.5 L16 23 L10 19.5 L10 12.5 Z" fill="currentColor" opacity="0.85"/>
+        </svg>
+        <span class="brand-name">GESTISCIME</span>
+      </a>
+      <nav class="nav-links" aria-label="Navigazione principale">
+        <a href="#prodotto">Prodotto</a>
+        <a href="#perche">Perché</a>
+        <a href="#sicurezza">Sicurezza</a>
+        <a href="#faq">FAQ</a>
+        <a href="#waitlist" class="nav-cta">Iscriviti</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow reveal" data-delay="0">
+            <span class="eyebrow-dot"></span>
+            Beta privata · Italia · Q4 2026
+          </p>
+          <h1 id="hero-title" class="hero-title reveal" data-delay="80">
+            Il tuo <em>patrimonio</em>,<br>
+            un'<em>unica</em> visione.
+          </h1>
+          <p class="hero-sub reveal" data-delay="160">
+            GESTISCIME unifica conti bancari, bollette, investimenti, fatture e patrimonio
+            in un comando intelligente che decide e agisce con te.
+            Meno Excel, più ricchezza.
+          </p>
+
+          <form id="waitlist-form" class="waitlist-form reveal" data-delay="240" novalidate>
+            <div class="form-row">
+              <label for="email-hero" class="visually-hidden">La tua email</label>
+              <input
+                type="email"
+                id="email-hero"
+                name="email"
+                placeholder="nome@esempio.it"
+                autocomplete="email"
+                inputmode="email"
+                required
+                aria-required="true"
+                aria-describedby="form-status-hero"
+              >
+              <button type="submit" class="btn btn-primary">
+                <span class="btn-label">Entra in lista</span>
+                <svg class="btn-arrow" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+            <p class="form-meta">
+              <span class="form-status" id="form-status-hero" role="status" aria-live="polite"></span>
+              <span class="form-fineprint">
+                Niente spam. Mai. Privacy <a href="/privacy.html">GDPR</a>.
+              </span>
+            </p>
+            <!-- Anti-bot honeypot (hidden from humans) -->
+            <input type="text" name="website" tabindex="-1" autocomplete="off" class="honeypot" aria-hidden="true">
+          </form>
+
+          <ul class="hero-trust reveal" data-delay="320">
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 L4 6 v6 c0 5 3.5 9 8 10 4.5-1 8-5 8-10 V6 Z" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>
+              Conforme PSD2 + GDPR
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M8 12 l3 3 l5-6" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Server EU · AES-256
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12 h4 l3-7 4 14 3-7 h4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Open Banking certificato
+            </li>
+          </ul>
+        </div>
+
+        <!-- Visual mock dashboard -->
+        <div class="hero-visual reveal" data-delay="400" aria-hidden="true">
+          <div class="dash-card">
+            <div class="dash-header">
+              <span class="dash-dot dash-dot--green"></span>
+              <span class="dash-label">Stato Patrimoniale</span>
+              <span class="dash-time">Oggi · 09:42</span>
+            </div>
+
+            <div class="dash-balance">
+              <span class="dash-balance-label">Netto Reale Spendibile</span>
+              <span class="dash-balance-value">€ 12.847<span class="dash-cents">,30</span></span>
+              <span class="dash-balance-delta">▲ 2,4% vs mese scorso</span>
+            </div>
+
+            <svg class="dash-chart" viewBox="0 0 320 80" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="amberGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="var(--orange)" stop-opacity="0.45"/>
+                  <stop offset="100%" stop-color="var(--orange)" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <path d="M0 60 C30 55, 50 30, 80 35 S 130 65, 160 50 S 220 20, 260 30 S 310 15, 320 18 L 320 80 L 0 80 Z" fill="url(#amberGrad)"/>
+              <path d="M0 60 C30 55, 50 30, 80 35 S 130 65, 160 50 S 220 20, 260 30 S 310 15, 320 18" fill="none" stroke="var(--orange)" stroke-width="1.5"/>
+            </svg>
+
+            <ul class="dash-rows">
+              <li>
+                <span class="dash-row-icon" aria-hidden="true">⚡</span>
+                <span class="dash-row-label">Bolletta luce — Enel</span>
+                <span class="dash-row-value">Pagata</span>
+              </li>
+              <li>
+                <span class="dash-row-icon" aria-hidden="true">🏠</span>
+                <span class="dash-row-label">Affitto · scadenza 2 giorni</span>
+                <span class="dash-row-value dash-row-value--warn">Programmato</span>
+              </li>
+              <li>
+                <span class="dash-row-icon" aria-hidden="true">📈</span>
+                <span class="dash-row-label">PAC adattivo · ETF World</span>
+                <span class="dash-row-value">+€ 250</span>
+              </li>
+              <li>
+                <span class="dash-row-icon" aria-hidden="true">🧾</span>
+                <span class="dash-row-label">Accantonamento IVA Q4</span>
+                <span class="dash-row-value">€ 1.420</span>
+              </li>
+            </ul>
+          </div>
+          <!-- Floating accent badges -->
+          <div class="float-badge float-badge--1">
+            <span class="float-badge-num">7</span>
+            <span class="float-badge-label">conti<br>aggregati</span>
+          </div>
+          <div class="float-badge float-badge--2">
+            <span class="float-badge-num">€ 312</span>
+            <span class="float-badge-label">risparmio<br>questo mese</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE / Trust strip -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Open Banking PSD2</span><span>·</span>
+        <span>Conformità GDPR</span><span>·</span>
+        <span>Crittografia AES-256</span><span>·</span>
+        <span>Server in Unione Europea</span><span>·</span>
+        <span>SCA · Strong Customer Authentication</span><span>·</span>
+        <span>Made in Italy</span><span>·</span>
+        <span>Open Banking PSD2</span><span>·</span>
+        <span>Conformità GDPR</span><span>·</span>
+        <span>Crittografia AES-256</span><span>·</span>
+        <span>Server in Unione Europea</span><span>·</span>
+      </div>
+    </div>
+
+    <!-- PROBLEM / SOLUTION -->
+    <section id="prodotto" class="section section--problem" aria-labelledby="problem-title">
+      <div class="container">
+        <p class="section-eyebrow">Il problema</p>
+        <h2 id="problem-title" class="section-title">
+          La tua vita finanziaria è frammentata
+          <em>su sette schermi diversi.</em>
+        </h2>
+        <div class="problem-grid">
+          <div class="problem-card">
+            <div class="problem-icon">🏦</div>
+            <h3>Conti sparsi</h3>
+            <p>L'app della banca, quella della carta prepagata, quella del wallet crypto. Otto password, zero visione d'insieme.</p>
+          </div>
+          <div class="problem-card">
+            <div class="problem-icon">📩</div>
+            <h3>Bollette dimenticate</h3>
+            <p>Email che si perdono, scadenze che arrivano, more che si moltiplicano. Solo gli italiani perdono in media oltre €1.800 in 10 anni per cattiva gestione.</p>
+          </div>
+          <div class="problem-card">
+            <div class="problem-icon">🧾</div>
+            <h3>Tasse opache</h3>
+            <p>Per chi ha partita IVA: «quanto è davvero mio di questo bonifico?» è la domanda che non dovrebbe esistere.</p>
+          </div>
+          <div class="problem-card">
+            <div class="problem-icon">📉</div>
+            <h3>Liquidità ferma</h3>
+            <p>Soldi sul conto che l'inflazione mangia. Nessuno ti ricorda che potresti farli rendere.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES — alternating layout -->
+    <section class="section section--features" aria-labelledby="features-title">
+      <div class="container">
+        <p class="section-eyebrow">La soluzione</p>
+        <h2 id="features-title" class="section-title">
+          Un <em>centro di comando</em>
+          per tutto il tuo denaro.
+        </h2>
+
+        <div class="feature-row feature-row--reverse">
+          <div class="feature-copy">
+            <span class="feature-num">01</span>
+            <h3>Aggregazione totale</h3>
+            <p>
+              Collega in un click tutte le tue banche, carte, wallet crypto e portafogli investimenti
+              tramite Open Banking PSD2. Visualizzi tutto in tempo reale, senza inserire nulla a mano.
+            </p>
+            <ul class="feature-list">
+              <li>+95% delle banche italiane supportate</li>
+              <li>Aggiornamento automatico ogni minuto</li>
+              <li>Sola lettura: i tuoi soldi non si muovono mai senza il tuo consenso</li>
+            </ul>
+          </div>
+          <div class="feature-visual">
+            <div class="visual-stack">
+              <div class="stack-row stack-row--a">
+                <span class="stack-bank">Intesa Sanpaolo</span>
+                <span class="stack-amount">€ 8.420,15</span>
+              </div>
+              <div class="stack-row stack-row--b">
+                <span class="stack-bank">Revolut</span>
+                <span class="stack-amount">€ 1.207,80</span>
+              </div>
+              <div class="stack-row stack-row--c">
+                <span class="stack-bank">Fineco · Investimenti</span>
+                <span class="stack-amount">€ 24.918,00</span>
+              </div>
+              <div class="stack-row stack-row--d">
+                <span class="stack-bank">Coinbase</span>
+                <span class="stack-amount">€ 943,55</span>
+              </div>
+              <div class="stack-line"></div>
+              <div class="stack-row stack-row--total">
+                <span class="stack-bank">Patrimonio totale</span>
+                <span class="stack-amount stack-amount--total">€ 35.489,50</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="feature-row">
+          <div class="feature-copy">
+            <span class="feature-num">02</span>
+            <h3>Bollette e scadenze in pilota automatico</h3>
+            <p>
+              L'AI riconosce le bollette dalle tue email, cataloga le scadenze e paga in automatico
+              (con la tua approvazione). Zero more, zero penali, zero stress.
+            </p>
+            <ul class="feature-list">
+              <li>Riconoscimento OCR su PDF e immagini</li>
+              <li>Notifiche intelligenti 5 giorni prima</li>
+              <li>Comparatore tariffe luce/gas/internet integrato</li>
+            </ul>
+          </div>
+          <div class="feature-visual">
+            <div class="bills-stack">
+              <div class="bill-card bill-card--paid">
+                <span class="bill-icon">⚡</span>
+                <div>
+                  <strong>Enel · Luce</strong>
+                  <span>Pagata · 18 apr</span>
+                </div>
+                <span class="bill-amount">€ 87,40</span>
+              </div>
+              <div class="bill-card bill-card--scheduled">
+                <span class="bill-icon">🔥</span>
+                <div>
+                  <strong>Eni · Gas</strong>
+                  <span>Programmata · 27 apr</span>
+                </div>
+                <span class="bill-amount">€ 64,20</span>
+              </div>
+              <div class="bill-card bill-card--alert">
+                <span class="bill-icon">📡</span>
+                <div>
+                  <strong>TIM · Internet</strong>
+                  <span>Tariffa più alta del 18% rispetto al mercato</span>
+                </div>
+                <button type="button" class="bill-action">Cambia</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="feature-row feature-row--reverse">
+          <div class="feature-copy">
+            <span class="feature-num">03</span>
+            <h3>Per partite IVA e PMI: il netto reale, sempre</h3>
+            <p>
+              Ogni bonifico ricevuto viene scisso automaticamente: IVA, contributi e tasse
+              vengono "sequestrate" in un salvadanaio virtuale. Vedi solo il netto realmente spendibile.
+              Mai più sorprese a fine anno.
+            </p>
+            <ul class="feature-list">
+              <li>Hub commercialista: invio documenti con un click</li>
+              <li>Scadenzario fiscale (F24, IVA, contributi)</li>
+              <li>Solleciti automatici per fatture scadute</li>
+            </ul>
+          </div>
+          <div class="feature-visual">
+            <div class="iva-card">
+              <div class="iva-header">Bonifico ricevuto</div>
+              <div class="iva-amount">€ 5.000,00</div>
+              <div class="iva-split">
+                <div class="iva-bar iva-bar--iva" style="--w:22%">
+                  <span>IVA · 22%</span>
+                  <strong>€ 1.100</strong>
+                </div>
+                <div class="iva-bar iva-bar--contrib" style="--w:26%">
+                  <span>Contributi</span>
+                  <strong>€ 1.300</strong>
+                </div>
+                <div class="iva-bar iva-bar--tax" style="--w:15%">
+                  <span>Imposte</span>
+                  <strong>€ 750</strong>
+                </div>
+                <div class="iva-bar iva-bar--net" style="--w:37%">
+                  <span>Netto reale</span>
+                  <strong>€ 1.850</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- WHY US (differentiator) -->
+    <section id="perche" class="section section--why" aria-labelledby="why-title">
+      <div class="container">
+        <p class="section-eyebrow">Perché GESTISCIME</p>
+        <h2 id="why-title" class="section-title">
+          Quello che gli altri <em>non fanno.</em>
+        </h2>
+
+        <div class="compare-table">
+          <div class="compare-head">
+            <div></div>
+            <div class="compare-col compare-col--us">GESTISCIME</div>
+            <div class="compare-col">App di budgeting</div>
+            <div class="compare-col">Home banking</div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-feature">Tutti i conti in un'unica vista</div>
+            <div class="compare-cell compare-cell--yes">✓</div>
+            <div class="compare-cell compare-cell--partial">parziale</div>
+            <div class="compare-cell compare-cell--no">solo i propri</div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-feature">Pagamento bollette automatico</div>
+            <div class="compare-cell compare-cell--yes">✓</div>
+            <div class="compare-cell compare-cell--no">—</div>
+            <div class="compare-cell compare-cell--partial">limitato</div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-feature">Accantonamento tasse partita IVA</div>
+            <div class="compare-cell compare-cell--yes">✓</div>
+            <div class="compare-cell compare-cell--no">—</div>
+            <div class="compare-cell compare-cell--no">—</div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-feature">AI advisor predittiva</div>
+            <div class="compare-cell compare-cell--yes">✓</div>
+            <div class="compare-cell compare-cell--no">—</div>
+            <div class="compare-cell compare-cell--no">—</div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-feature">Eredità digitale e successione</div>
+            <div class="compare-cell compare-cell--yes">✓</div>
+            <div class="compare-cell compare-cell--no">—</div>
+            <div class="compare-cell compare-cell--no">—</div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-feature">Suddivisione spese viaggi/eventi</div>
+            <div class="compare-cell compare-cell--yes">✓</div>
+            <div class="compare-cell compare-cell--partial">app esterne</div>
+            <div class="compare-cell compare-cell--no">—</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECURITY -->
+    <section id="sicurezza" class="section section--security" aria-labelledby="security-title">
+      <div class="container security-grid">
+        <div>
+          <p class="section-eyebrow">Sicurezza by design</p>
+          <h2 id="security-title" class="section-title section-title--small">
+            Il tuo denaro resta in banca.<br>
+            <em>Noi tocchiamo solo le informazioni.</em>
+          </h2>
+          <p class="security-lead">
+            GESTISCIME non è una banca e non custodisce i tuoi soldi. Siamo un intermediario tecnologico
+            autorizzato che, con il tuo consenso esplicito, legge le informazioni dei tuoi conti tramite
+            le API Open Banking PSD2 — lo stesso standard usato dalle istituzioni bancarie europee.
+          </p>
+        </div>
+        <ul class="security-list">
+          <li>
+            <strong>Crittografia end-to-end</strong>
+            <span>AES-256 a riposo, TLS 1.3 in transito. Standard FIPS 140-2.</span>
+          </li>
+          <li>
+            <strong>Server in Unione Europea</strong>
+            <span>Nessun trasferimento di dati extra-UE. Conformità Schrems II.</span>
+          </li>
+          <li>
+            <strong>Sola lettura, mai scrittura senza consenso</strong>
+            <span>Ogni pagamento richiede una tua autorizzazione esplicita (SCA).</span>
+          </li>
+          <li>
+            <strong>Consenso revocabile</strong>
+            <span>In qualsiasi momento, con un click. I dati vengono cancellati entro 24h.</span>
+          </li>
+          <li>
+            <strong>Audit trail completo</strong>
+            <span>Ogni accesso è loggato e visibile. Tu sai sempre cosa succede.</span>
+          </li>
+          <li>
+            <strong>Conformità GDPR + PSD2</strong>
+            <span>DPO nominato. DPIA pubblica. Diritto all'oblio garantito.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ROADMAP -->
+    <section class="section section--roadmap" aria-labelledby="roadmap-title">
+      <div class="container">
+        <p class="section-eyebrow">Roadmap</p>
+        <h2 id="roadmap-title" class="section-title">Da zero a sistema operativo finanziario.</h2>
+
+        <ol class="roadmap">
+          <li class="roadmap-item roadmap-item--active">
+            <span class="roadmap-year">2026</span>
+            <h3>MVP · Beta privata</h3>
+            <p>Aggregazione conti italiani, riconoscimento bollette, dashboard del netto reale.</p>
+          </li>
+          <li class="roadmap-item">
+            <span class="roadmap-year">2027</span>
+            <h3>Tool e collaborazioni</h3>
+            <p>Marketplace di consulenti certificati, integrazione SDI per fatturazione, AI advisor.</p>
+          </li>
+          <li class="roadmap-item">
+            <span class="roadmap-year">2028</span>
+            <h3>Privato avanzato</h3>
+            <p>PAC adattivo, suddivisione spese viaggi, eredità digitale, hub immobiliare.</p>
+          </li>
+          <li class="roadmap-item">
+            <span class="roadmap-year">2029</span>
+            <h3>Suite business completa</h3>
+            <p>Gestione tesoreria PMI, riconciliazione automatica fatture, KPI cash flow.</p>
+          </li>
+          <li class="roadmap-item">
+            <span class="roadmap-year">2030+</span>
+            <h3>Wealth management</h3>
+            <p>Consulenza patrimoniale qualificata, gruppi di acquisto collettivi, private banking layer.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section section--faq" aria-labelledby="faq-title">
+      <div class="container">
+        <p class="section-eyebrow">Domande frequenti</p>
+        <h2 id="faq-title" class="section-title">Prima che tu ce lo chieda.</h2>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>
+              <span>GESTISCIME è una banca?</span>
+              <span class="faq-toggle" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                No. GESTISCIME <strong>non è una banca</strong> e non custodisce i tuoi soldi.
+                Siamo un intermediario tecnologico che si collega in lettura ai tuoi conti
+                tramite le API Open Banking previste dalla normativa europea PSD2.
+                I tuoi soldi restano sempre nella tua banca.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>I miei dati bancari sono al sicuro?</span>
+              <span class="faq-toggle" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Sì. GESTISCIME è progettato secondo gli standard PSD2 e GDPR:
+                crittografia AES-256, autenticazione forte (SCA),
+                server esclusivamente in Unione Europea, consenso revocabile in qualsiasi momento.
+                Non conserviamo le tue credenziali bancarie:
+                usiamo token di accesso temporanei rilasciati direttamente dalla tua banca.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Quando sarà disponibile in Italia?</span>
+              <span class="faq-toggle" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Il lancio dell'MVP è previsto nel <strong>2026</strong>.
+                Iscrivendoti alla lista d'attesa avrai accesso anticipato alla beta privata
+                e potrai contribuire allo sviluppo del prodotto, segnalando le banche
+                e le funzionalità che ti servono di più.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Quanto costa GESTISCIME?</span>
+              <span class="faq-toggle" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Il livello base — aggregazione conti, monitoraggio spese,
+                visione del patrimonio — sarà <strong>gratuito</strong>.
+                Le funzionalità avanzate (automazione pagamenti,
+                hub commercialista, AI advisor, eredità digitale) saranno disponibili
+                tramite abbonamento mensile. I prezzi finali verranno comunicati
+                agli iscritti alla beta prima del lancio commerciale.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Funziona anche per partite IVA e PMI?</span>
+              <span class="faq-toggle" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Sì. GESTISCIME è pensato sia per privati sia per professionisti e PMI.
+                Per le partite IVA include accantonamento virtuale di IVA e contributi,
+                gestione delle fatture elettroniche tramite SDI, scadenzario fiscale
+                e hub di scambio documenti con il commercialista.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Posso revocare l'accesso ai miei conti in qualsiasi momento?</span>
+              <span class="faq-toggle" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Sì, in ogni momento. Il consenso PSD2 è per definizione revocabile.
+                Una volta revocato, tutti i dati associati ai tuoi conti vengono cancellati
+                dai nostri sistemi entro 24 ore, in conformità con il diritto all'oblio GDPR.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Quali banche italiane supportate?</span>
+              <span class="faq-toggle" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Al lancio supporteremo le principali banche italiane (Intesa Sanpaolo, UniCredit,
+                BPER, Banco BPM, Fineco, illimity, Banca Sella, Crédit Agricole),
+                le neobank (Revolut, N26) e i servizi di pagamento PSD2-compliant.
+                La copertura si estenderà progressivamente includendo BCC, Poste e banche minori.
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section id="waitlist" class="section section--cta" aria-labelledby="cta-title">
+      <div class="container cta-box">
+        <h2 id="cta-title" class="cta-title">
+          <em>Diventa</em> tra i primi
+          a provare GESTISCIME.
+        </h2>
+        <p class="cta-sub">
+          Posti limitati nella beta privata. Niente carta di credito,
+          niente impegno: solo accesso anticipato e voce in capitolo
+          su cosa costruiamo dopo.
+        </p>
+
+        <form id="waitlist-form-bottom" class="waitlist-form waitlist-form--big" novalidate>
+          <div class="form-row">
+            <label for="email-bottom" class="visually-hidden">La tua email</label>
+            <input
+              type="email"
+              id="email-bottom"
+              name="email"
+              placeholder="nome@esempio.it"
+              autocomplete="email"
+              inputmode="email"
+              required
+              aria-required="true"
+              aria-describedby="form-status-bottom"
+            >
+            <button type="submit" class="btn btn-primary">
+              <span class="btn-label">Voglio entrare</span>
+              <svg class="btn-arrow" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+          <p class="form-meta form-meta--centered">
+            <span class="form-status" id="form-status-bottom" role="status" aria-live="polite"></span>
+            <span class="form-fineprint">
+              Iscrivendoti accetti la nostra <a href="/privacy.html">Privacy Policy</a>.
+              Niente spam. Cancellazione con un click.
+            </span>
+          </p>
+          <input type="text" name="website" tabindex="-1" autocomplete="off" class="honeypot" aria-hidden="true">
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="brand brand--footer" aria-label="GESTISCIME — torna alla home">
+          <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M16 2 L28 9 L28 23 L16 30 L4 23 L4 9 Z" fill="none" stroke="currentColor" stroke-width="1.4"/>
+            <path d="M16 9 L22 12.5 L22 19.5 L16 23 L10 19.5 L10 12.5 Z" fill="currentColor" opacity="0.85"/>
+          </svg>
+          <span class="brand-name">GESTISCIME</span>
+        </a>
+        <p class="footer-tag">
+          Il pilota automatico per il tuo patrimonio.
+          Gestisci tutto. Non perdere niente.
+        </p>
+      </div>
+
+      <nav class="footer-col" aria-label="Prodotto">
+        <h4>Prodotto</h4>
+        <a href="#prodotto">Funzionalità</a>
+        <a href="#sicurezza">Sicurezza</a>
+        <a href="#faq">FAQ</a>
+        <a href="#waitlist">Lista d'attesa</a>
+      </nav>
+
+      <nav class="footer-col" aria-label="Legale">
+        <h4>Legale</h4>
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/terms.html">Termini di Servizio</a>
+        <a href="/cookies.html">Cookie Policy</a>
+        <a href="mailto:dpo@gestisci.me">Contatta il DPO</a>
+      </nav>
+
+      <div class="footer-col footer-col--contact">
+        <h4>Contatti</h4>
+        <a href="mailto:info@gestisci.me">info@gestisci.me</a>
+        <p class="footer-disclaimer">
+          GESTISCIME è in fase di sviluppo. Non è ancora un servizio finanziario regolamentato.
+          Il presente sito non costituisce sollecitazione all'investimento.
+        </p>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© <span id="year">2026</span> GESTISCIME — Tutti i diritti riservati. Made with care in Italia.</p>
+      <p class="footer-meta">
+        <span class="status-dot"></span>
+        Pre-lancio · Beta privata Q4 2026
+      </p>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="/assets/js/config.js"></script>
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

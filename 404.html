@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Pagina non trovata · GESTISCIME</title>
+  <meta name="description" content="La pagina che cercavi non esiste o è stata spostata.">
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#150826">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=DM+Sans:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+    .err-wrap {
+      min-height: calc(100vh - 80px);
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 4rem 1rem;
+      position: relative;
+      z-index: 2;
+    }
+    .err-code {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(7rem, 22vw, 14rem);
+      line-height: 0.9;
+      color: var(--orange);
+      letter-spacing: -0.04em;
+      margin: 0 0 1rem;
+      opacity: 0.95;
+      text-shadow: 0 0 60px rgba(237, 122, 62, 0.25);
+    }
+    .err-title {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: clamp(1.6rem, 3.5vw, 2.5rem);
+      color: var(--cream);
+      margin: 0 0 0.8rem;
+      line-height: 1.1;
+    }
+    .err-sub {
+      color: var(--text-soft);
+      max-width: 44ch;
+      margin: 0 auto 2.5rem;
+      line-height: 1.65;
+    }
+    .err-actions {
+      display: flex;
+      gap: 0.75rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .err-btn-secondary {
+      background: transparent;
+      color: var(--cream);
+      padding: 0.85rem 1.4rem;
+      border-radius: 999px;
+      border: 1px solid var(--border-strong);
+      font-weight: 500;
+      transition: border-color 0.2s var(--ease), color 0.2s var(--ease);
+    }
+    .err-btn-secondary:hover {
+      border-color: var(--orange);
+      color: var(--orange);
+    }
+  </style>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-header" role="banner">
+    <div class="container nav-row">
+      <a href="/" class="brand" aria-label="GESTISCIME — torna alla home">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+          <path d="M16 2 L28 9 L28 23 L16 30 L4 23 L4 9 Z" fill="none" stroke="currentColor" stroke-width="1.4"/>
+          <path d="M16 9 L22 12.5 L22 19.5 L16 23 L10 19.5 L10 12.5 Z" fill="currentColor" opacity="0.85"/>
+        </svg>
+        <span class="brand-name">GESTISCIME</span>
+      </a>
+      <nav class="nav-links" aria-label="Navigazione principale">
+        <a href="/#prodotto">Prodotto</a>
+        <a href="/#sicurezza">Sicurezza</a>
+        <a href="/#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="err-wrap">
+    <div>
+      <div class="err-code">404</div>
+      <h1 class="err-title">Questa pagina non esiste.</h1>
+      <p class="err-sub">
+        Il link è rotto, oppure quella che cercavi è stata spostata.
+        Il tuo patrimonio invece — quello sì che lo ritroviamo.
+      </p>
+      <div class="err-actions">
+        <a href="/" class="btn btn-primary">
+          <span class="btn-label">Torna alla home</span>
+          <svg class="btn-arrow" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a href="/#waitlist" class="err-btn-secondary">Iscriviti alla beta</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

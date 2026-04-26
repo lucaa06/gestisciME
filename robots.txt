@@ -1,0 +1,28 @@
+user-agent: *
+allow: /
+disallow: /assets/js/config.js
+
+# AI crawlers — explicitly allowed for GEO / AI Overviews
+user-agent: GPTBot
+allow: /
+
+user-agent: Google-Extended
+allow: /
+
+user-agent: ChatGPT-User
+allow: /
+
+user-agent: PerplexityBot
+allow: /
+
+user-agent: ClaudeBot
+allow: /
+
+user-agent: anthropic-ai
+allow: /
+
+user-agent: CCBot
+allow: /
+
+sitemap: https://gestisci.me/sitemap.xml
+host: https://gestisci.me
