@@ -231,6 +231,88 @@
     .forEach((form) => wireForm(form));
 
   /* -------------------------------------------
+     Cookie Consent Management (GDPR)
+     - Shows banner on first visit
+     - Locks forms until a choice is made
+     - Persists choice in localStorage
+  ------------------------------------------- */
+  const COOKIE_KEY = "gestiscime:cookie-consent";
+
+  function getCookieConsent() {
+    try { return localStorage.getItem(COOKIE_KEY); } catch(e) { return null; }
+  }
+
+  function setCookieConsent(value) {
+    try { localStorage.setItem(COOKIE_KEY, value); } catch(e) { /* ignore */ }
+  }
+
+  function lockForms() {
+    document.querySelectorAll(".waitlist-form").forEach((f) => {
+      f.classList.add("consent-required");
+      f.querySelectorAll("input, button").forEach((el) => el.setAttribute("disabled", ""));
+    });
+  }
+
+  function unlockForms() {
+    document.querySelectorAll(".waitlist-form").forEach((f) => {
+      f.classList.remove("consent-required");
+      f.querySelectorAll("input, button").forEach((el) => el.removeAttribute("disabled"));
+    });
+  }
+
+  function hideBanner() {
+    const banner = document.getElementById("cookie-banner");
+    if (banner) {
+      banner.style.transition = "opacity 0.3s ease, transform 0.3s ease";
+      banner.style.opacity = "0";
+      banner.style.transform = "translateY(20px)";
+      setTimeout(() => banner.classList.add("is-hidden"), 320);
+    }
+  }
+
+  function initCookieBanner() {
+    const consent = getCookieConsent();
+
+    // Already made a choice → just apply and skip banner
+    if (consent === "accepted" || consent === "rejected") {
+      unlockForms();
+      return;
+    }
+
+    // No choice yet → lock forms and show banner
+    lockForms();
+
+    const banner = document.getElementById("cookie-banner");
+    const btnAccept = document.getElementById("cookie-accept");
+    const btnReject = document.getElementById("cookie-reject");
+
+    if (!banner || !btnAccept || !btnReject) return;
+
+    btnAccept.addEventListener("click", () => {
+      setCookieConsent("accepted");
+      unlockForms();
+      hideBanner();
+    });
+
+    btnReject.addEventListener("click", () => {
+      // "Solo tecnici" = consent to functional-only; forms still work
+      setCookieConsent("rejected");
+      unlockForms();
+      hideBanner();
+    });
+
+    // Clicking the locked form overlay scrolls to banner
+    document.querySelectorAll(".waitlist-form.consent-required").forEach((f) => {
+      f.addEventListener("click", () => {
+        banner.scrollIntoView({ behavior: "smooth", block: "end" });
+        btnAccept.focus();
+      });
+    });
+  }
+
+  initCookieBanner();
+
+  /* -------------------------------------------
      Smooth-scroll for in-page anchors with offset
      to compensate for the sticky header
   ------------------------------------------- */

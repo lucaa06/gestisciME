@@ -1352,3 +1352,181 @@ button { font-family: inherit; cursor: pointer; }
   }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* ============================================
+   Cookie Consent Banner
+============================================ */
+
+#cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  padding: 0 var(--gutter) 1.5rem;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+}
+
+#cookie-banner.is-hidden {
+  display: none;
+}
+
+.cookie-inner {
+  pointer-events: all;
+  width: 100%;
+  max-width: 820px;
+  background: linear-gradient(135deg, var(--midnight-3) 0%, rgba(30, 14, 50, 0.98) 100%);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  box-shadow:
+    0 -4px 60px -10px rgba(0, 0, 0, 0.7),
+    0 0 0 1px rgba(237, 122, 62, 0.06) inset;
+  padding: 1.5rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1.5rem;
+  align-items: center;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  animation: cookie-slide-up 0.5s var(--ease) both;
+}
+
+@keyframes cookie-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cookie-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.cookie-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--cream);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cookie-title::before {
+  content: "🍪";
+  font-size: 1rem;
+}
+
+.cookie-desc {
+  font-size: 0.82rem;
+  color: var(--text-soft);
+  line-height: 1.55;
+  max-width: 55ch;
+  margin: 0;
+}
+
+.cookie-desc a {
+  color: var(--orange);
+  border-bottom: 1px dotted rgba(237, 122, 62, 0.4);
+}
+.cookie-desc a:hover {
+  color: var(--orange-bright);
+  border-bottom-color: var(--orange-bright);
+}
+
+.cookie-actions {
+  display: flex;
+  gap: 0.6rem;
+  flex-shrink: 0;
+  align-items: center;
+}
+
+.cookie-btn {
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 0.65rem 1.25rem;
+  border-radius: 999px;
+  border: 0;
+  cursor: pointer;
+  transition: background 0.2s var(--ease), transform 0.2s var(--ease), opacity 0.2s;
+  white-space: nowrap;
+}
+
+.cookie-btn--accept {
+  background: var(--orange);
+  color: var(--midnight);
+}
+.cookie-btn--accept:hover {
+  background: var(--orange-bright);
+  transform: translateY(-1px);
+}
+
+.cookie-btn--reject {
+  background: transparent;
+  color: var(--text-soft);
+  border: 1px solid var(--border);
+}
+.cookie-btn--reject:hover {
+  color: var(--cream);
+  border-color: rgba(245, 237, 224, 0.25);
+  background: rgba(245, 237, 224, 0.04);
+}
+
+/* Form locking overlay when consent not given */
+.waitlist-form.consent-required {
+  position: relative;
+}
+
+.waitlist-form.consent-required::after {
+  content: "Accetta i cookie per iscriverti";
+  position: absolute;
+  inset: 0;
+  background: rgba(21, 8, 38, 0.65);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-soft);
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  transition: background 0.2s var(--ease);
+}
+
+.waitlist-form.consent-required:hover::after {
+  background: rgba(21, 8, 38, 0.5);
+  color: var(--orange);
+}
+
+@media (max-width: 640px) {
+  .cookie-inner {
+    grid-template-columns: 1fr;
+    padding: 1.25rem 1.25rem;
+    gap: 1rem;
+    border-radius: var(--radius);
+  }
+  .cookie-actions {
+    width: 100%;
+  }
+  .cookie-btn {
+    flex: 1;
+    text-align: center;
+    padding: 0.75rem 1rem;
+  }
+  .waitlist-form.consent-required::after {
+    border-radius: 18px;
+  }
+}
