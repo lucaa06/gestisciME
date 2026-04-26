@@ -222,9 +222,9 @@ button { font-family: inherit; cursor: pointer; }
 .brand:hover { color: var(--orange); }
 
 .brand-mark {
-  width: 28px;
+  width: auto;
   height: 28px;
-  color: var(--orange);
+  object-fit: contain;
   flex-shrink: 0;
 }
 
