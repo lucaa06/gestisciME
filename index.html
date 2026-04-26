@@ -24,8 +24,28 @@
   <meta name="language" content="Italian">
   <meta http-equiv="content-language" content="it-IT">
 
-  <!-- Canonical & Hreflang -->
+  <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://gestisci.me/">
+
+  <!-- Google tag (gtag.js) con Consent Mode v2 -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    
+    // Imposta il consenso di default a NEGATO
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'wait_for_update': 500
+    });
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E4C3GMPF0K"></script>
+  <script>
+    gtag('js', new Date());
+    gtag('config', 'G-E4C3GMPF0K');
+  </script>
   <link rel="alternate" hreflang="it" href="https://gestisci.me/">
   <link rel="alternate" hreflang="it-IT" href="https://gestisci.me/">
   <link rel="alternate" hreflang="x-default" href="https://gestisci.me/">
@@ -925,10 +945,13 @@
   >
     <div class="cookie-inner">
       <div class="cookie-text">
-        <p class="cookie-title">Informativa sui cookie</p>
+        <p class="cookie-title">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color: var(--orange);"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"></path><path d="M8.5 8.5v.01"></path><path d="M16 12.5v.01"></path><path d="M12 16v.01"></path><path d="M11 12.5v.01"></path></svg>
+          Informativa sui cookie
+        </p>
         <p class="cookie-desc" id="cookie-desc">
-          Questo sito usa <strong>cookie tecnici</strong> (localStorage) per ricordare che hai già inviato la tua email e non mostrarti il form due volte.
-          Nessun cookie di profilazione, nessun tracker di terze parti.
+          Questo sito usa <strong>cookie tecnici</strong> (localStorage) necessari per il funzionamento del form e <strong>Google Analytics</strong> per statistiche aggregate anonime.
+          Solo cliccando su "Accetto" abiliterai le statistiche. Nessun tracciamento pubblicitario.
           <a href="./cookies.html">Cookie Policy</a> · <a href="./privacy.html">Privacy GDPR</a>.
         </p>
       </div>

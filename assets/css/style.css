@@ -1420,11 +1420,6 @@ button { font-family: inherit; cursor: pointer; }
   gap: 0.5rem;
 }
 
-.cookie-title::before {
-  content: "🍪";
-  font-size: 1rem;
-}
-
 .cookie-desc {
   font-size: 0.82rem;
   color: var(--text-soft);

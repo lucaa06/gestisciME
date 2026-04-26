@@ -276,6 +276,12 @@
     // Already made a choice → just apply and skip banner
     if (consent === "accepted" || consent === "rejected") {
       unlockForms();
+      const banner = document.getElementById("cookie-banner");
+      if (banner) banner.classList.add("is-hidden");
+      
+      if (consent === "accepted" && typeof window.gtag === 'function') {
+        window.gtag('consent', 'update', { 'analytics_storage': 'granted' });
+      }
       return;
     }
 
@@ -292,6 +298,9 @@
       setCookieConsent("accepted");
       unlockForms();
       hideBanner();
+      if (typeof window.gtag === 'function') {
+        window.gtag('consent', 'update', { 'analytics_storage': 'granted' });
+      }
     });
 
     btnReject.addEventListener("click", () => {
