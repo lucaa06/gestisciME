@@ -272,27 +272,27 @@
 
   function initCookieBanner() {
     const consent = getCookieConsent();
+    const banner = document.getElementById("cookie-banner");
 
-    // Already made a choice → just apply and skip banner
+    // Already made a choice → just apply and leave banner hidden (is-hidden is set in HTML)
     if (consent === "accepted" || consent === "rejected") {
       unlockForms();
-      const banner = document.getElementById("cookie-banner");
-      if (banner) banner.classList.add("is-hidden");
-      
       if (consent === "accepted" && typeof window.gtag === 'function') {
         window.gtag('consent', 'update', { 'analytics_storage': 'granted' });
       }
       return;
     }
 
-    // No choice yet → lock forms and show banner
+    // No choice yet → lock forms and reveal banner
     lockForms();
 
-    const banner = document.getElementById("cookie-banner");
+    if (!banner) return;
+    banner.classList.remove("is-hidden");
+
     const btnAccept = document.getElementById("cookie-accept");
     const btnReject = document.getElementById("cookie-reject");
 
-    if (!banner || !btnAccept || !btnReject) return;
+    if (!btnAccept || !btnReject) return;
 
     btnAccept.addEventListener("click", () => {
       setCookieConsent("accepted");
@@ -304,15 +304,16 @@
     });
 
     btnReject.addEventListener("click", () => {
-      // "Solo tecnici" = consent to functional-only; forms still work
       setCookieConsent("rejected");
       unlockForms();
       hideBanner();
     });
 
-    // Clicking the locked form overlay scrolls to banner
+    // Clicking the locked form overlay scrolls to banner.
+    // Guard prevents the listener from firing after unlock (class removed but listener persists).
     document.querySelectorAll(".waitlist-form.consent-required").forEach((f) => {
       f.addEventListener("click", () => {
+        if (!f.classList.contains("consent-required")) return;
         banner.scrollIntoView({ behavior: "smooth", block: "end" });
         btnAccept.focus();
       });
