@@ -47,8 +47,8 @@ jobs:
           window.GESTISCIME_CONFIG = {
             SUPABASE_URL: "${SUPABASE_URL}",
             SUPABASE_ANON_KEY: "${SUPABASE_ANON_KEY}",
-            WAITLIST_TABLE: "leads",
-            SOURCE: "homepage",
+            WAITLIST_TABLE: "waitlist",
+            STARTUP_ID: "gestiscime",
           };
           EOF
 

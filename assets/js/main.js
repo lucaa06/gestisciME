@@ -104,12 +104,7 @@
 
     const payload = {
       email: email.toLowerCase().trim(),
-      source: cfg.SOURCE || "homepage",
-      // user_agent and referrer help you spot bots later if needed.
-      // No IP, no fingerprint — GDPR-friendly.
-      user_agent: (navigator.userAgent || "").slice(0, 250),
-      referrer: (document.referrer || "").slice(0, 500),
-      locale: (navigator.language || "it-IT").slice(0, 10),
+      startup: cfg.STARTUP_ID || "gestiscime"
     };
 
     const response = await fetch(endpoint, {
