@@ -256,7 +256,10 @@
   function unlockForms() {
     document.querySelectorAll(".waitlist-form").forEach((f) => {
       f.classList.remove("consent-required");
-      f.querySelectorAll("input, button").forEach((el) => el.removeAttribute("disabled"));
+      f.querySelectorAll("input, button").forEach((el) => {
+        el.removeAttribute("disabled");
+        el.disabled = false; // Forza lo sblocco anche via proprietà JS
+      });
     });
   }
 
@@ -274,7 +277,7 @@
     const consent = getCookieConsent();
     const banner = document.getElementById("cookie-banner");
 
-    // Already made a choice → just apply and leave banner hidden (is-hidden is set in HTML)
+    // Se è già stata fatta una scelta, assicuriamoci che tutto sia sbloccato e usciamo
     if (consent === "accepted" || consent === "rejected") {
       unlockForms();
       if (consent === "accepted" && typeof window.gtag === 'function') {
