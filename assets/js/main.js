@@ -247,10 +247,7 @@
   }
 
   function lockForms() {
-    document.querySelectorAll(".waitlist-form").forEach((f) => {
-      f.classList.add("consent-required");
-      f.querySelectorAll("input, button").forEach((el) => el.setAttribute("disabled", ""));
-    });
+    // Funzione disabilitata: non blocchiamo più i form
   }
 
   function unlockForms() {
@@ -314,11 +311,10 @@
 
     // Clicking the locked form overlay scrolls to banner.
     // Guard prevents the listener from firing after unlock (class removed but listener persists).
-    document.querySelectorAll(".waitlist-form.consent-required").forEach((f) => {
+    // Clicking the form now does nothing special regarding cookies
+    document.querySelectorAll(".waitlist-form").forEach((f) => {
       f.addEventListener("click", () => {
-        if (!f.classList.contains("consent-required")) return;
-        banner.scrollIntoView({ behavior: "smooth", block: "end" });
-        btnAccept.focus();
+        // Form sempre attivo
       });
     });
   }

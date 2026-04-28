@@ -1477,34 +1477,8 @@ button { font-family: inherit; cursor: pointer; }
   background: rgba(245, 237, 224, 0.04);
 }
 
-/* Form locking overlay when consent not given */
-.waitlist-form.consent-required {
-  position: relative;
-}
+/* Form locking overlay removed - forms are now always accessible */
 
-.waitlist-form.consent-required::after {
-  content: "Accetta i cookie per iscriverti";
-  position: absolute;
-  inset: 0;
-  background: rgba(21, 8, 38, 0.65);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border-radius: 999px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: var(--text-soft);
-  cursor: pointer;
-  letter-spacing: 0.04em;
-  transition: background 0.2s var(--ease);
-}
-
-.waitlist-form.consent-required:hover::after {
-  background: rgba(21, 8, 38, 0.5);
-  color: var(--orange);
-}
 
 @media (max-width: 640px) {
   .cookie-inner {
